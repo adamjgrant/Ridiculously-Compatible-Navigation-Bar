@@ -10,5 +10,4 @@ Based on <a href="http://users.tpg.com.au/j_birch/plugins/superfish/">SuperFish<
 <p>Because I'm <strong>CRAAAAAAZY</strong>.</p>
 
 <h1><a href="http://clrwheel.com/p/rcnb/" style="text-align:center;display:block;width:100%;">Demo</a></h1>
-<br>
 <h1><a href="https://github.com/downloads/ajkochanowicz/Ridiculously-Compatible-Navigation-Bar/rcnb.zip" style="text-align:center;display:block;width:100%;">Download</a></h1>
