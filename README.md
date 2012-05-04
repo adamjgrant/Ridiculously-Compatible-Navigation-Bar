@@ -7,6 +7,6 @@ Based on <a href="http://users.tpg.com.au/j_birch/plugins/superfish/">SuperFish<
 <p>And by that I mean it's compatible with <strong>IE6+</strong>, <strong>Opera, Chrome, Safari, Firefox, Camino, and OmniWeb</strong>. Sorry, no support for Netscape.
 
 <h1>What the hell for?</h1>
-<p>Because I'm <strong>CRAAAAAAZY</strong></p>.
+<p>Because I'm <strong>CRAAAAAAZY</strong>.</p>
 
 <h1><a href="http://clrwheel.com/p/rcnb/" style="text-align:center;display:block;width:100%;">Demo</a></h1>
