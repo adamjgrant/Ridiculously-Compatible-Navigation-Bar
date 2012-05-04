@@ -1,0 +1,192 @@
+.sf-menu,
+.sf-menu *,
+.ui-autocomplete,
+ui-autocomplete * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: 'Helvetica Neue', helvetica, sans-serif;
+}
+.sf-menu {
+  position: relative;
+  line-height: 1.0;
+  text-transform: uppercase;
+  font-weight: bold;
+  float: left;
+  margin-bottom: 1em;
+  border: 1px solid #DDD;
+  width: 100%;
+  background: #EEE;
+}
+.sf-menu li.nav-header {
+  font-size: 0.65em;
+  padding: 10px 10px 2px 12px;
+  width: auto;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #777;
+}
+.sf-menu li.divider-vertical {
+  border-bottom: 1px solid white;
+  outline: 1px solid #DDD;
+  font-size: 0;
+  line-height: 0;
+}
+.sf-menu ul,
+.sf-menu ul.ui-autocomplete {
+  position: absolute;
+  top: -999em;
+  width: 10em;
+  font-weight: normal;
+  text-transform: none;
+}
+.sf-menu ul li,
+.sf-menu ul.ui-autocomplete li {
+  width: 100%;
+}
+.sf-menu ul li:hover,
+.sf-menu ul.ui-autocomplete li:hover {
+  visibility: inherit;
+}
+.sf-menu ul a > .sf-sub-indicator,
+.sf-menu ul.ui-autocomplete a > .sf-sub-indicator {
+  background-position: 0 0;
+}
+.sf-menu ul a:focus > .sf-sub-indicator,
+.sf-menu ul.ui-autocomplete a:focus > .sf-sub-indicator,
+.sf-menu ul a:hover > .sf-sub-indicator,
+.sf-menu ul.ui-autocomplete a:hover > .sf-sub-indicator,
+.sf-menu ul a:active > .sf-sub-indicator,
+.sf-menu ul.ui-autocomplete a:active > .sf-sub-indicator,
+.sf-menu ul li:hover > a > .sf-sub-indicator,
+.sf-menu ul.ui-autocomplete li:hover > a > .sf-sub-indicator,
+.sf-menu ul li.sfHover > a > .sf-sub-indicator,
+.sf-menu ul.ui-autocomplete li.sfHover > a > .sf-sub-indicator {
+  background-position: -10px 0;
+}
+.sf-menu ul .sf-sub-indicator,
+.sf-menu ul.ui-autocomplete .sf-sub-indicator {
+  background-position: -10px 0;
+}
+.sf-menu li {
+  float: left;
+  position: relative;
+  background: #EEEEEE;
+}
+.sf-menu li:hover ul,
+.sf-menu li.sfHover ul {
+  left: -1px;
+  top: 1.9em;
+  z-index: 99;
+  background-color: #EEE;
+}
+.sf-menu li li {
+  background: #EEE;
+}
+.sf-menu li li li {
+  background: #EEE;
+}
+.sf-menu input.search {
+  margin: -5px;
+  height: 18px;
+  border: 1px solid #DDD;
+}
+.sf-menu a {
+  display: block;
+  position: relative;
+  padding: .75em 1em;
+  text-decoration: none;
+  font-size: 0.75em;
+}
+.sf-menu a,
+.sf-menu .sf-menu a:visited {
+  color: #222222;
+}
+.sf-menu li:hover,
+.sf-menu li.sfHover,
+.sf-menu a:focus,
+.sf-menu a:hover,
+.sf-menu a:active {
+  background: #DDD;
+  outline: 0;
+}
+.sf-menu a.sf-with-ul {
+  padding-right: 2.25em;
+  min-width: 1px;
+}
+ul.sf-menu li:hover li ul,
+ul.sf-menu li.sfHover li ul {
+  top: -999em;
+}
+ul.sf-menu li li:hover ul,
+ul.sf-menu li li.sfHover ul {
+  left: 10em;
+  top: 0;
+}
+ul.sf-menu li li:hover li ul,
+ul.sf-menu li li.sfHover li ul {
+  top: -999em;
+}
+ul.sf-menu li li li:hover ul,
+ul.sf-menu li li li.sfHover ul {
+  left: 10em;
+  top: 0;
+}
+.sf-sub-indicator {
+  position: absolute;
+  display: block;
+  right: .75em;
+  top: 1.05em;
+  width: 10px;
+  height: 10px;
+  text-indent: -999em;
+  overflow: hidden;
+  background: url('../images/arrows-444444.png') no-repeat -10px -100px;
+}
+a > .sf-sub-indicator {
+  top: .8em;
+  background-position: 0 -100px;
+}
+a:focus > .sf-sub-indicator,
+a:hover > .sf-sub-indicator,
+a:active > .sf-sub-indicator,
+li:hover > a > .sf-sub-indicator,
+li.sfHover > a > .sf-sub-indicator {
+  background-position: -10px -100px;
+}
+.sf-shadow ul {
+  background: url('../images/shadow.png') no-repeat bottom right;
+  padding: 0 8px 9px 0;
+}
+.sf-shadow ul.sf-shadow-off {
+  background: transparent;
+}
+ul.ui-autocomplete {
+  border: 1px solid #CCC;
+  width: 200px;
+  padding: 0;
+  margin: 0px;
+  font-size: 0.8em;
+}
+ul.ui-autocomplete li.ui-menu-item a {
+  padding: 7px;
+  display: block;
+  text-decoration: none;
+  color: #222;
+  border-left: 5px solid white;
+  position: relative;
+}
+ul.ui-autocomplete li.ui-menu-item a:hover {
+  background-color: #EEE;
+  border-left: 5px solid #AAAAAA;
+}
+ul.ui-autocomplete li.ui-menu-item a:active {
+  background-color: #DDD;
+  border-left: 5px solid black;
+}
+ul.ui-autocomplete li.ui-menu-item a p {
+  position: relative;
+  margin: 0;
+  line-height: 1.4em;
+  zoom: 1;
+}

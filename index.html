@@ -1,0 +1,169 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+	<head>
+		<title>A very basic Superfish menu example</title>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<!-- If IE6, give the user the ie6 stylesheet -->
+		<!--[if lt IE 7]>
+			<link rel="stylesheet" type="text/css" href="css/superfish-ie6.css" media="screen">
+		<![endif]-->
+		
+		<!-- If greater than IE6 or not IE at all, give normal stylesheet -->
+		<!--[if gt IE 6]>
+			<link rel="stylesheet" type="text/css" href="css/superfish.css" media="screen">
+		<![endif]-->
+		
+		<!--[if !IE]> -->
+			<link rel="stylesheet" type="text/css" href="css/superfish.css" media="screen">
+		<!-- <![endif]-->
+		<script type="text/javascript" src="js/jquery-1.2.6.min.js"></script>
+		<script type="text/javascript" src="js/hoverIntent.js"></script>
+		<script type="text/javascript" src="js/superfish.js"></script>
+		<script type="text/javascript">
+
+		// initialise plugins
+		jQuery(function(){
+			jQuery('ul.sf-menu').superfish();
+		});
+
+		</script>
+		<style>* {font-family: 'Helvetica Neue', helvetica, sans-serif;}</style>
+	</head>
+	<body>
+	<h1>Navigation Menu</h1>
+		<ul class="sf-menu">
+			<li class="current">
+				<a href="#a">menu item</a>
+				<ul>
+					<li class="nav-header">Group</li>
+					<li>
+						<a href="#aa">menu item that is quite long</a>
+					</li>
+					<li class="current">
+						<a href="#ab">menu item</a>
+						<ul>
+							<li class="current"><a href="#">menu item</a></li>
+							<li><a href="#aba">menu item</a></li>
+							<li><a href="#abb">menu item</a></li>
+							<li><a href="#abc">menu item</a></li>
+							<li><a href="#abd">menu item</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">menu item</a>
+						<ul>
+							<li><a href="#">menu item</a></li>
+							<li><a href="#">menu item</a></li>
+							<li><a href="#">menu item</a></li>
+							<li><a href="#">menu item</a></li>
+							<li><a href="#">menu item</a></li>
+						</ul>
+					</li>
+					<li class="divider-vertical"></li>
+					<li>
+						<a href="#">menu item</a>
+						<ul>
+							<li><a href="#">menu item</a></li>
+							<li><a href="#">menu item</a></li>
+							<li><a href="#">menu item</a></li>
+							<li><a href="#">menu item</a></li>
+							<li><a href="#">menu item</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">menu item</a>
+			</li>
+			<li>
+				<a href="#">menu item</a>
+				<ul>
+					<li>
+						<a href="#">menu item</a>
+						<ul>
+							<li><a href="#">short</a></li>
+							<li><a href="#">short</a></li>
+							<li><a href="#">short</a></li>
+							<li><a href="#">short</a></li>
+							<li><a href="#">short</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">menu item</a>
+						<ul>
+							<li><a href="#">menu item</a></li>
+							<li><a href="#">menu item</a></li>
+							<li><a href="#">menu item</a></li>
+							<li><a href="#">menu item</a></li>
+							<li><a href="#">menu item</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">menu item</a>
+						<ul>
+							<li><a href="#">menu item</a></li>
+							<li><a href="#">menu item</a></li>
+							<li><a href="#">menu item</a></li>
+							<li><a href="#">menu item</a></li>
+							<li><a href="#">menu item</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">menu item</a>
+						<ul>
+							<li><a href="#">menu item</a></li>
+							<li><a href="#">menu item</a></li>
+							<li><a href="#">menu item</a></li>
+							<li><a href="#">menu item</a></li>
+							<li><a href="#">menu item</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">menu item</a>
+						<ul>
+							<li><a href="#">menu item</a></li>
+							<li><a href="#">menu item</a></li>
+							<li><a href="#">menu item</a></li>
+							<li><a href="#">menu item</a></li>
+							<li><a href="#">menu item</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">menu item</a>
+			</li>
+			<li>
+				<a><input type="text" class="search" /></a>
+			</li>	
+		</ul>
+		
+		<br><hr><br>
+		<div style="padding-left: 500px;">
+			<h1>Typeahead</h1>
+			<input class="ui-autocomplete-input"/>
+			<ul class="ui-autocomplete ui-menu ui-widget ui-widget-content ui-corner-all">
+			  <li class="ui-menu-item">
+			    <a class="ui-corner-all" href="#">
+			    	<p><strong>Title</strong></p>
+			    	<p>Details</p>
+			    </a>
+			  </li>
+			  <li class="ui-menu-item">
+			    <a class="ui-corner-all" href="#">
+			    	<p><strong>Title</strong></p>
+			    	<p>Details</p>
+			    </a>
+			  </li>
+			  <li class="ui-menu-item">
+			    <a class="ui-corner-all" href="#">
+			    	<p><strong>Title</strong></p>
+			    	<p>Details</p>
+			    </a>
+			  </li>
+			</ul>
+		</div>
+		
+	</body>
+</html>

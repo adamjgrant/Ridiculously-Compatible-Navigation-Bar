@@ -1,0 +1,198 @@
+.sf-menu, .sf-menu *, ul.ui-autocomplete li.ui-menu-item {
+	margin:			0;
+	padding:		0;
+	list-style:		none;
+	font-family: 'Helvetica Neue', helvetica, sans-serif;
+}
+
+.sf-menu {
+	line-height:	1.0;
+	text-transform:uppercase;
+	font-weight:bold;
+	float:			left;
+	margin-bottom:	1em;
+	border: 1px solid #DDD;
+	background-color: #FBFBFB;
+	background-image: -moz-linear-gradient(top, white, whiteSmoke);
+	background-image: -ms-linear-gradient(top, white, whiteSmoke);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(whiteSmoke));
+	background-image: -webkit-linear-gradient(top, white, whiteSmoke);
+	background-image: -o-linear-gradient(top, white, whiteSmoke);
+	background-image: linear-gradient(top, white, whiteSmoke);
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f5f5f5', GradientType=0);
+	border: 1px solid #DDD;
+	-webkit-box-shadow: inset 0 1px 0 #ffffff;
+	-moz-box-shadow: inset 0 1px 0 #ffffff;
+	box-shadow: inset 0 1px 0 #ffffff;
+	width: 100%;
+	li.nav-header {
+		font-size: 0.65em;
+		padding: 10px 10px 2px 12px;
+		width: auto;
+		text-transform: uppercase;
+		font-weight: bold;
+		color: #777;
+	}
+	li.divider-vertical {
+		border-bottom: 1px solid white;
+		outline: 1px solid #DDD;
+	}
+	ul {
+		position:		absolute;
+		top:			-999em;
+		width:			10em; /* left offset of submenus need to match (see below) */
+		font-weight:normal;
+		text-transform:none;
+		border: 1px solid #DDD;
+		box-shadow: 4px 4px 4px #DDD;
+		li {
+			width: 100%;
+			&:hover {
+				visibility:		inherit; /* fixes IE7 'sticky bug' */
+			}
+		}
+		a {
+			> .sf-sub-indicator { background-position:  0 0; }
+		}
+		a:focus > .sf-sub-indicator,
+		a:hover > .sf-sub-indicator,
+		a:active > .sf-sub-indicator,
+		li:hover > a > .sf-sub-indicator,
+		li.sfHover > a > .sf-sub-indicator {
+			background-position: -10px 0; /* arrow hovers for modern browsers*/
+		}
+		.sf-sub-indicator { background-position:  -10px 0; }
+	}
+	> li > ul {border-top:0px;}
+	li {
+		float: left;
+		position: relative;
+		// background:		#EEEEEE;
+		&:hover ul, &.sfHover ul {
+			left:			-1px;
+			top:			1.9em; /* match top ul list item height */
+			z-index:		999;
+			background: #EEE;
+		}
+		li {
+			background:		#EEE;
+			li {
+				background:		#EEE;
+			}
+		}
+	}
+	input.search {
+		margin: -5px;
+		height: 18px;
+		border: 1px solid #DDD;
+	}
+	a {
+		display:		block;
+		position:		relative;
+		padding: .75em 1em;
+		text-decoration: none;
+		font-size: 0.75em;
+	}
+	a, .sf-menu a:visited  { /* visited pseudo selector so IE6 applies text colour*/
+		color:			#555555;
+	}
+	li:hover, li.sfHover, a:focus, a:hover, a:active {
+		background: #EEE;
+		outline:		0;
+	}
+	a.sf-with-ul {
+		padding-right: 	2.25em;
+		min-width:		1px; /* trigger IE7 hasLayout so spans position accurately */
+	}
+}
+ul.sf-menu li ul li:hover > a {
+	background:#666;
+	color:#eee;
+}
+ul.sf-menu li:hover li ul,
+ul.sf-menu li.sfHover li ul {
+	top:			-999em;
+}
+ul.sf-menu li li:hover ul,
+ul.sf-menu li li.sfHover ul {
+	left:			10em; /* match ul width */
+	top:			-1px;
+}
+ul.sf-menu li li:hover li ul,
+ul.sf-menu li li.sfHover li ul {
+	top:			-999em;
+}
+ul.sf-menu li li li:hover ul,
+ul.sf-menu li li li.sfHover ul {
+	left:			10em; /* match ul width */
+	top:			-1px;
+}
+
+.sf-sub-indicator {
+	position:		absolute;
+	display:		block;
+	right:			.75em;
+	top:			1.05em; /* IE6 only */
+	width:			10px;
+	height:			10px;
+	text-indent: 	-999em;
+	overflow:		hidden;
+	background:		url('../images/arrows-444444.png') no-repeat -10px -100px; /* 8-bit indexed alpha png. IE6 gets solid image only */
+}
+a > .sf-sub-indicator {  /* give all except IE6 the correct values */
+	top:			.8em;
+	background-position: 0 -100px; /* use translucent arrow for modern browsers*/
+}
+/* apply hovers to modern browsers */
+a:focus > .sf-sub-indicator,
+a:hover > .sf-sub-indicator,
+a:active > .sf-sub-indicator,
+li:hover > a > .sf-sub-indicator,
+li.sfHover > a > .sf-sub-indicator {
+	background-position: -10px -100px; /* arrow hovers for modern browsers*/
+}
+
+.sf-shadow ul {
+	//background:	url('../images/shadow.png') no-repeat bottom right;
+	//padding: 0 8px 9px 0;
+	//-moz-border-radius-bottomleft: 17px;
+	//-moz-border-radius-topright: 17px;
+	//-webkit-border-top-right-radius: 17px;
+	//-webkit-border-bottom-left-radius: 17px;
+	&.sf-shadow-off {
+		background: transparent;
+	}
+}
+
+// Autocomplete stuff only
+
+ul.ui-autocomplete {
+border: 1px solid #CCC;
+max-width: 200px;
+padding:0;
+margin: 0px;
+font-size: 0.8em;
+	li.ui-menu-item {
+		a {
+			padding: 7px;
+			display: block;
+			text-decoration: none;
+			color: #222;
+			text-shadow: 1px 1px 2px white;
+			border-left: 5px solid white;
+			&:hover {
+				background-color: #EEE;
+				border-left: 5px solid #AAAAAA;
+			}
+			&:active {
+				background-color: #DDD;
+				border-left: 5px solid black;
+			}
+			p {
+				margin: 0;
+				line-height: 1.4em;
+			}
+		}
+	}
+}

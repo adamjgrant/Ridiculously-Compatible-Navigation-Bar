@@ -1,0 +1,182 @@
+.sf-menu, .sf-menu *, .ui-autocomplete, ui-autocomplete * {
+	margin:			0;
+	padding:		0;
+	list-style:		none;
+	font-family: 'Helvetica Neue', helvetica, sans-serif;
+}
+.sf-menu {
+	position:relative;
+	line-height:	1.0;
+	text-transform:uppercase;
+	font-weight:bold;
+	float:			left;
+	margin-bottom:	1em;
+	border: 1px solid #DDD;
+	width: 100%;
+	background:#EEE;
+	li.nav-header {
+		font-size: 0.65em;
+		padding: 10px 10px 2px 12px;
+		width: auto;
+		text-transform: uppercase;
+		font-weight: bold;
+		color: #777;
+	}
+	li.divider-vertical {
+		border-bottom: 1px solid white;
+		outline: 1px solid #DDD;
+		font-size:0;	// This and...
+		line-height:0; // ...this are necessary to give it a zero height
+	}
+	ul, ul.ui-autocomplete {
+		position:		absolute;
+		top:			-999em;
+		width:			10em; // left offset of submenus need to match (see below) 
+		font-weight:normal;
+		text-transform:none;
+		li {
+			width: 100%;
+			&:hover {
+				visibility:		inherit; // fixes IE7 'sticky bug' 
+			}
+		}
+		a {
+			> .sf-sub-indicator { background-position:  0 0; }
+		}
+		a:focus > .sf-sub-indicator,
+		a:hover > .sf-sub-indicator,
+		a:active > .sf-sub-indicator,
+		li:hover > a > .sf-sub-indicator,
+		li.sfHover > a > .sf-sub-indicator {
+			background-position: -10px 0; // arrow hovers for modern browsers
+		}
+		.sf-sub-indicator { background-position:  -10px 0; }
+	}
+	li {
+		float: left;
+		position: relative;
+		background:		#EEEEEE;
+		&:hover ul, &.sfHover ul {
+			left:			-1px;
+			top:			1.9em; // match top ul list item height 
+			z-index:		99;
+			background-color:#EEE;
+		}
+		li {
+			background:		#EEE;
+			li {
+				background:		#EEE;
+			}
+		}
+	}
+	input.search {
+		margin: -5px;
+		height: 18px;
+		border: 1px solid #DDD;
+	}
+	a {
+		display:		block;
+		position:		relative;
+		padding: .75em 1em;
+		text-decoration: none;
+		font-size: 0.75em;
+	}
+	a, .sf-menu a:visited  { // visited pseudo selector so IE6 applies text colour
+		color:			#222222;
+	}
+	li:hover, li.sfHover, a:focus, a:hover, a:active {
+		background:		#DDD;
+		outline:		0;
+	}
+	a.sf-with-ul {
+		padding-right: 	2.25em;
+		min-width:		1px; // trigger IE7 hasLayout so spans position accurately 
+	}
+}
+
+ul.sf-menu li:hover li ul,
+ul.sf-menu li.sfHover li ul {
+	top:			-999em;
+}
+ul.sf-menu li li:hover ul,
+ul.sf-menu li li.sfHover ul {
+	left:			10em; // match ul width 
+	top:			0;
+}
+ul.sf-menu li li:hover li ul,
+ul.sf-menu li li.sfHover li ul {
+	top:			-999em;
+}
+ul.sf-menu li li li:hover ul,
+ul.sf-menu li li li.sfHover ul {
+	left:			10em; // match ul width 
+	top:			0;
+}
+
+.sf-sub-indicator {
+	position:		absolute;
+	display:		block;
+	right:			.75em;
+	top:			1.05em; // IE6 only 
+	width:			10px;
+	height:			10px;
+	text-indent: 	-999em;
+	overflow:		hidden;
+	background:		url('../images/arrows-444444.png') no-repeat -10px -100px; // 8-bit indexed alpha png. IE6 gets solid image only 
+}
+a > .sf-sub-indicator {  // give all except IE6 the correct values 
+	top:			.8em;
+	background-position: 0 -100px; // use translucent arrow for modern browsers
+}
+// apply hovers to modern browsers 
+a:focus > .sf-sub-indicator,
+a:hover > .sf-sub-indicator,
+a:active > .sf-sub-indicator,
+li:hover > a > .sf-sub-indicator,
+li.sfHover > a > .sf-sub-indicator {
+	background-position: -10px -100px; // arrow hovers for modern browsers
+}
+
+//** shadows for all but IE6 **
+.sf-shadow ul {
+	background:	url('../images/shadow.png') no-repeat bottom right;
+	padding: 0 8px 9px 0;
+	&.sf-shadow-off {
+		background: transparent;
+	}
+}
+
+// Autocomplete stuff only
+
+ul.ui-autocomplete {
+border: 1px solid #CCC;
+width: 200px;
+padding:0;
+margin: 0px;
+font-size: 0.8em;
+	li.ui-menu-item {
+		a {
+			padding: 7px;
+			display: block;
+			text-decoration: none;
+			color: #222;
+			//text-shadow: 1px 1px 2px white;
+			border-left: 5px solid white;
+			position: relative;
+			&:hover {
+				background-color: #EEE;
+				border-left: 5px solid #AAAAAA;
+			}
+			&:active {
+				background-color: #DDD;
+				border-left: 5px solid black;
+			}
+			p {
+				position: relative;
+				margin: 0;
+				line-height: 1.4em;
+				zoom: 1;
+			}
+		}
+	}
+}

@@ -1,0 +1,1 @@
+The archive folder is simply meant to hold files we may need later. In this case, the original, unmodified superfish css files.
